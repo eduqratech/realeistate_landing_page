@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Preloader } from "./components/Preloader";
-import { ThemeToggle } from "./components/ThemeToggle";
 import { Hero } from "./components/Hero";
 import { StorySection } from "./components/StorySection";
 import { HorizontalScroll } from "./components/HorizontalScroll";
@@ -8,18 +7,14 @@ import { ImmersiveSection } from "./components/ImmersiveSection";
 import { PropertyGallery } from "./components/PropertyGallery";
 import { CTASection } from "./components/CTASection";
 import { Footer } from "./components/Footer";
+import { Navigation } from "./components/Navigation";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState("dark");
-
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
+    // Force dark mode if needed, though CSS handles it now.
+    document.documentElement.setAttribute("data-theme", "dark");
+  }, []);
 
   const properties = [
     {
@@ -84,16 +79,20 @@ function App() {
 
   return (
     <div className="relative">
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+      <Navigation />
 
       {/* Hero Section */}
       <Hero heroImage="https://images.unsplash.com/photo-1635111031688-9b13c0125d12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZWFsJTIwZXN0YXRlJTIwYWVyaWFsJTIwdmlld3xlbnwxfHx8fDE3Njk1MTA3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080" />
 
       {/* Story Section */}
-      <StorySection image="https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBpbnRlcmlvciUyMGxpdmluZyUyMHJvb218ZW58MXx8fHwxNzY5NDkxMTgzfDA&ixlib=rb-4.1.0&q=80&w=1080" />
+      <div id="story">
+        <StorySection image="https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBpbnRlcmlvciUyMGxpdmluZyUyMHJvb218ZW58MXx8fHwxNzY5NDkxMTgzfDA&ixlib=rb-4.1.0&q=80&w=1080" />
+      </div>
 
       {/* Horizontal Scroll Section */}
-      <HorizontalScroll />
+      <div id="philosophy">
+        <HorizontalScroll />
+      </div>
 
       {/* Immersive Visual Section */}
       <ImmersiveSection
@@ -102,7 +101,9 @@ function App() {
       />
 
       {/* Property Gallery with Flip Cards */}
-      <PropertyGallery properties={properties} />
+      <div id="properties">
+        <PropertyGallery properties={properties} />
+      </div>
 
       {/* Another Immersive Section */}
       <ImmersiveSection
@@ -111,7 +112,9 @@ function App() {
       />
 
       {/* CTA Section */}
-      <CTASection />
+      <div id="contact">
+        <CTASection />
+      </div>
 
       {/* Footer */}
       <Footer />

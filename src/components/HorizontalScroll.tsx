@@ -59,7 +59,7 @@ export function HorizontalScroll() {
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
-              className="relative h-[70vh] w-full overflow-hidden group rounded-lg"
+              className="relative min-h-[50vh] md:h-[70vh] w-full overflow-hidden group rounded-lg"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}

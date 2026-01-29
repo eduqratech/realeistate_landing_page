@@ -69,21 +69,23 @@ export function CTASection() {
             <input
               type="text"
               placeholder="Your Name"
+              aria-label="Your Name"
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
-              className="px-6 py-4 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300"
+              className="px-6 py-4 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-base text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300"
               required
             />
             <input
               type="email"
               placeholder="Email Address"
+              aria-label="Email Address"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="px-6 py-4 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300"
+              className="px-6 py-4 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-base text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300"
               required
             />
           </div>
@@ -91,22 +93,24 @@ export function CTASection() {
           <input
             type="tel"
             placeholder="Preferred Contact"
+            aria-label="Preferred Contact Phone Number"
             value={formData.phone}
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value })
             }
-            className="w-full px-6 py-4 mb-6 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300"
+            className="w-full px-6 py-4 mb-6 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-base text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300"
             required
           />
 
           <textarea
             placeholder="Message (Optional)"
+            aria-label="Message"
             value={formData.message}
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
             rows={5}
-            className="w-full px-6 py-4 mb-8 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300 resize-none"
+            className="w-full px-6 py-4 mb-8 bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] text-base text-[rgb(var(--color-text-primary))] placeholder:text-[rgb(var(--color-text-secondary))] focus:border-[rgb(var(--color-accent))] focus:outline-none transition-colors duration-300 resize-none"
           />
 
           <motion.button

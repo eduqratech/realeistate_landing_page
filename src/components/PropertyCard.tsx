@@ -48,7 +48,7 @@ export function PropertyCard({
           <div className="relative h-full overflow-hidden group">
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[rgb(var(--color-accent)/0.2)] via-transparent to-[rgb(var(--color-accent)/0.3)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
-            
+
             {/* Image with zoom effect */}
             <motion.img
               src={image}
@@ -102,7 +102,7 @@ export function PropertyCard({
           <div className="w-full h-full bg-[rgb(var(--color-bg-secondary))] border border-[rgb(var(--color-border))] p-8 flex flex-col justify-between">
             <div>
               <h3 className="mb-8">{title}</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[rgb(var(--color-accent))] mt-1 flex-shrink-0" />

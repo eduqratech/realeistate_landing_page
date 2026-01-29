@@ -1,11 +1,14 @@
 import { motion } from "motion/react";
-import { Instagram, Facebook, Linkedin, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   const socialLinks = [
     { icon: Instagram, href: "#" },
     { icon: Facebook, href: "#" },
-    { icon: Linkedin, href: "#" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/suresh-peddinti-5b6941232",
+    },
   ];
 
   return (
@@ -97,20 +100,27 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[rgb(var(--color-accent))]" />
                 <a
-                  href="mailto:info@luxury.com"
+                  href="mailto:sureshpeddinti221@gmail.com"
                   className="text-sm text-[rgb(var(--color-text-secondary))] hover:text-[rgb(var(--color-accent))] transition-colors duration-300"
                 >
-                  info@luxury.com
+                  sureshpeddinti221@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[rgb(var(--color-accent))]" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+919618344086"
                   className="text-sm text-[rgb(var(--color-text-secondary))] hover:text-[rgb(var(--color-accent))] transition-colors duration-300"
                 >
-                  +1 (234) 567-890
+                  +91 9618344086
                 </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-[rgb(var(--color-accent))] mt-1 flex-shrink-0" />
+                <span className="text-sm text-[rgb(var(--color-text-secondary))]">
+                  Gallery milinium plaza upperpally chintalmate road Rangareddy
+                  Hyderbad 500048
+                </span>
               </li>
             </ul>
 
